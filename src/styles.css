@@ -1,0 +1,138 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.App {
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+.audio-controls-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.audio-icon-button {
+  cursor: pointer;
+  outline: none;
+  color: rgb(30, 38, 46);
+}
+
+.toggle-button-container {
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-button-container > * {
+  display: block;
+  height: 20px;
+  top: 0;
+  left: 0;
+}
+
+.progress-bar-container {
+  width: 100%;
+  border-radius: 3px;
+  position: relative;
+  background-color: lightgray;
+}
+
+.progress-bar-container .progress-bar {
+  background-color: black;
+  border-radius: 6px;
+  height: 6px;
+}
+
+.progress-bar-container .progress-bar-caret {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: 0.2s ease-out transform;
+  background-color: black;
+  height: 7px;
+  width: 7px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.progress-bar-container .progress-bar-caret:hover {
+  transform: translateY(-50%) translateX(-50%) scale(2);
+}
+
+.time-container {
+  margin: 0 15px;
+  font-size: 14px;
+  color: gray;
+  font-weight: 100;
+}
+
+h1 {
+  display: inline-block;
+  background-image: url("https://s3.amazonaws.com/befunkyanonymous/AD6dm0E-1558126799205037.jpg");
+  background-size: cover;
+  margin-bottom: 30px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.song-container {
+  display: flex;
+  flex-wrap: none;
+}
+
+.song-container img {
+  box-shadow: 0px 3px 13px -7px rgba(0, 0, 0, 0.75);
+  margin-right: 30px;
+  border-radius: 3px;
+  height: 100px;
+}
+
+.song-container .song-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.song-container .song-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.song-container .song-album {
+  margin-bottom: 15px;
+  font-weight: 100;
+  color: rgb(163, 163, 163);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+  .time-container.passed {
+    overflow: hidden;
+    margin-left: 0;
+    width: 0;
+  }
+
+  .song-container {
+    flex-direction: column;
+  }
+
+  .song-container img {
+    box-shadow: 0px 3px 13px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 6px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .song-container .song-title {
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
